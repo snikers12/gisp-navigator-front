@@ -1,0 +1,27 @@
+<div class="container grant">
+  <div class="d-flex align-items-center">
+    <h1 class="mb-0">Название</h1>
+    <div class="d-flex align-items-center">
+      <div class="d-flex align-items-center">
+        <span class="grant-type"></span>
+        <span class="grant-button">Рекомендовано вам</span>
+      </div>
+      <button type="button" class="button button-question" placement="right" ngbTooltip="Рекомендовано вам"></button>
+    </div>
+  </div>
+  <h4 class="grant-text">История успеха</h4>
+  <div class="reviews">
+    <div class="reviews-items">
+      <span class="reviews-items-name">Амир</span>
+      <span class="reviews-items-text">
+        Доставка 18 дней в Пензу. Трек отслеживался. Продавец на связи. Мой рост 175 , ОТ 85, ОБ 105 заказала Green + L.
+        Размер подошёл. Леггинсы классные. Мягкие, приятные к телу, одеваются легко, тянутся хорошо. Я чувствую себя в
+        них очень комфортно. Довольна покупкой. Посмотрим как будут носится. Рекомендую к покупке!
+      </span>
+    </div>
+  </div>
+  <h4 class="grant-text">Вас может заинтересовать</h4>
+  <div class="d-flex flex-wrap justify-content-between">
+    <app-card *ngFor="let item of [1, 2, 3]" class="main-item"></app-card>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+.grants {
+  padding: 64px 0;
+}
+
+.main {
+  &-item {
+    width: calc(33.3333% - 20px);
+    @media (max-width: 991px) {
+      width: calc(50% - 10px);
+    }
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+}

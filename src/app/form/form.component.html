@@ -1,0 +1,15 @@
+<div class="container form">
+  <h1 class="text-center mb-0">Подбор грантов</h1>
+  <div class="d-flex align-items-center flex-column w-100 form-main">
+    <div class="form-progress">
+      <span class="form-progress-item" [class.form-progress-item-active]="currentStage === 1"></span>
+      <span class="form-progress-item" [class.form-progress-item-active]="currentStage === 2"></span>
+      <span class="form-progress-item" [class.form-progress-item-active]="currentStage === 3"></span>
+      <span class="form-progress-item" [class.form-progress-item-active]="currentStage === 4"></span>
+    </div>
+    <div class="form-block">
+      <h5 class="text-center mb-4">Вы хотите чтобы делион выиграл всех</h5>
+      <button (click)="changeStage()">{{currentStage === 4 ? 'Закончить' : 'Дальше'}}</button>
+    </div>
+  </div>
+</div>

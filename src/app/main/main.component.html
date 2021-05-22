@@ -1,0 +1,147 @@
+<div class="container main">
+  <h1 class="mb-0">Навигатор по грантам</h1>
+  <div class="main-block">
+    <div class="d-flex justify-content-between">
+      <input type="text" placeholder="Ищите что хотите" class="input main-input">
+      <button class="button main-button" routerLink="/form/">Подобрать</button>
+    </div>
+    <div class="d-flex main-filter align-items-center">
+      <ng-select
+        [items]="['ПАрпкпк', 'ergreg', 'frefreferf']"
+        [virtualScroll]="false"
+        [searchable]="false"
+        [clearable]="false"
+        class="select select-custom"
+        bindValue="id"
+        bindLabel="name"
+        clearAllText="Очистить"
+        notFoundText="Ничего не найдено"
+        placeholder="Не выбрано"
+      >
+      </ng-select>
+      <ng-select
+        [items]="['ПАрпкпк', 'ergreg', 'frefreferf']"
+        [virtualScroll]="false"
+        [searchable]="false"
+        [clearable]="false"
+        class="select select-custom"
+        bindValue="id"
+        bindLabel="name"
+        clearAllText="Очистить"
+        notFoundText="Ничего не найдено"
+        placeholder="Не выбрано"
+      >
+      </ng-select>
+      <ng-select
+        [items]="['ПАрпкпк', 'ergreg', 'frefreferf']"
+        [virtualScroll]="false"
+        [searchable]="false"
+        [clearable]="false"
+        class="select select-custom"
+        bindValue="id"
+        bindLabel="name"
+        clearAllText="Очистить"
+        notFoundText="Ничего не найдено"
+        placeholder="Не выбрано"
+      >
+      </ng-select>
+      <div>
+        <label class="custom-checkbox">
+          <input
+            class="checkbox"
+            type="checkbox"
+          >
+          <span class="checkbox">Ликвидирован</span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="isUser">
+    <div class="d-flex align-items-center">
+      <h3 class="mt-4 mb-0">Похожие проекты</h3>
+      <button type="button" class="button button-question mt-4" placement="right" ngbTooltip="Похожие проекты"></button>
+    </div>
+    <ngb-carousel>
+      <ng-template ngbSlide>
+        <div class="d-flex flex-wrap justify-content-between">
+          <app-card *ngFor="let item of [1, 2, 3]" class="main-item"></app-card>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="d-flex flex-wrap justify-content-between">
+          <app-card *ngFor="let item of [1, 2, 3]" class="main-item"></app-card>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="d-flex flex-wrap justify-content-between">
+          <app-card *ngFor="let item of [1, 2, 3]" class="main-item"></app-card>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+    <div class="d-flex align-items-center">
+      <h3 class="mt-4 mb-0">Можете получить прямо сейчас</h3>
+      <button type="button" class="button button-question mt-4" placement="right" ngbTooltip="Можете получить прямо сейчас"></button>
+    </div>
+    <ngb-carousel>
+      <ng-template ngbSlide>
+        <div class="d-flex flex-wrap justify-content-between">
+          <app-card *ngFor="let item of [1, 2, 3]" class="main-item"></app-card>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="d-flex flex-wrap justify-content-between">
+          <app-card *ngFor="let item of [1, 2, 3]" class="main-item"></app-card>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="d-flex flex-wrap justify-content-between">
+          <app-card *ngFor="let item of [1, 2, 3]" class="main-item"></app-card>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+    <div class="d-flex align-items-center">
+      <h3 class="mt-4 mb-0">Легко отчитаться</h3>
+      <button type="button" class="button button-question mt-4" placement="right" ngbTooltip="Легко отчитаться"></button>
+    </div>
+    <ngb-carousel>
+      <ng-template ngbSlide>
+        <div class="d-flex flex-wrap justify-content-between">
+          <app-card *ngFor="let item of [1, 2, 3]" class="main-item"></app-card>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="d-flex flex-wrap justify-content-between">
+          <app-card *ngFor="let item of [1, 2, 3]" class="main-item"></app-card>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="d-flex flex-wrap justify-content-between">
+          <app-card *ngFor="let item of [1, 2, 3]" class="main-item"></app-card>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+  <div *ngIf="!isUser">
+    <div class="d-flex align-items-center">
+      <h3 class="mt-4 mb-0">Выбор начинающих</h3>
+      <button type="button" class="button button-question mt-4" placement="right" ngbTooltip="Выбор начинающих"></button>
+    </div>
+    <ngb-carousel>
+      <ng-template ngbSlide>
+        <div class="d-flex flex-wrap justify-content-between">
+          <app-card *ngFor="let item of [1, 2, 3]" class="main-item"></app-card>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="d-flex flex-wrap justify-content-between">
+          <app-card *ngFor="let item of [1, 2, 3]" class="main-item"></app-card>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="d-flex flex-wrap justify-content-between">
+          <app-card *ngFor="let item of [1, 2, 3]" class="main-item"></app-card>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+</div>

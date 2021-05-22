@@ -1,0 +1,82 @@
+@import "../../styles/mixins";
+
+.grant {
+  padding: 64px 0;
+
+  &-text {
+    margin-top: 24px;
+  }
+
+  &-button {
+    margin-left: 6px;
+  }
+
+  &-type {
+    margin-left: 24px;
+    padding: 7px;
+    background: greenyellow;
+    color: white;
+    border-radius: 50%;
+  }
+}
+
+.reviews {
+  &-items {
+    display: flex;
+    margin-top: 16px;
+
+    &-name {
+      font-size: 14px;
+      line-height: 20px;
+      color: #222222;
+      min-width: 125px;
+      padding-right: 5px;
+      font-weight: 700;
+    }
+
+    &-text {
+      color: #222222;
+      font-weight: 400;
+      font-size: 14px;
+      word-break: break-all;
+    }
+  }
+}
+
+.main {
+  &-item {
+    width: calc(33.3333% - 20px);
+    @media (max-width: 991px) {
+      width: calc(50% - 10px);
+    }
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+}
+
+.button {
+  width: 120px;
+  background: rebeccapurple;
+  color: white;
+  border-radius: 8px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  border: none;
+  outline: none;
+
+  &-question {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 10px;
+    background: #fff;
+    border: 1px solid black;
+    background: asset_url('img/question.svg') no-repeat center;
+    background-size: 15px;
+  }
+}
