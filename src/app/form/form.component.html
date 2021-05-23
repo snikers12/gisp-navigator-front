@@ -1,5 +1,5 @@
-<div class="container form">
-  <h1 class="text-center mb-0">Подбор грантов</h1>
+<div class="container form" id="top">
+  <h1 class="text-center mb-0">Подбор мер поддержки</h1>
   <div class="d-flex align-items-center flex-column w-100 form-main">
     <div class="form-progress">
       <span class="form-progress-item" [class.form-progress-item-active]="currentStage === 1"></span>
@@ -8,8 +8,71 @@
       <span class="form-progress-item" [class.form-progress-item-active]="currentStage === 4"></span>
     </div>
     <div class="form-block">
-      <h5 class="text-center mb-4">Вы хотите чтобы делион выиграл всех</h5>
-      <button (click)="changeStage()">{{currentStage === 4 ? 'Закончить' : 'Дальше'}}</button>
+      <div [ngSwitch]="currentStage">
+        <ng-template ngSwitchCase="1">
+          <h5 class="text-center mb-4">Основная информация</h5>
+          <div class="d-flex justify-content-center align-items-center">
+            <span class="form-block-label">ИНН</span>
+            <input type="text" placeholder="Введите инн" class="input">
+          </div>
+          <div class="d-flex justify-content-center w-100 mt-4">
+            <span>ИЛИ</span>
+          </div>
+          <div class="d-flex justify-content-center align-items-center mt-4">
+            <span class="form-block-label">ОГРН</span>
+            <input type="text" placeholder="Введите огрн" class="input">
+          </div>
+        </ng-template>
+        <ng-template ngSwitchCase="2">
+          <h5 class="text-center mb-4">Формат предоставления поддержки</h5>
+          <div class="w-100 d-flex justify-content-center">
+            <div class="form-block-label-hesk d-flex justify-content-between flex-wrap">
+              <div class="form-main-box" *ngFor="let item of [0, 1, 1, 1, 1, 1, 1, 1, 1, 1]">
+                <label class="custom-checkbox">
+                  <input
+                    class="checkbox"
+                    type="checkbox"
+                  >
+                  <span class="checkbox">Ликвидирован</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template ngSwitchCase="3">
+          <h5 class="text-center mb-4">Регулярность оказания меры поддержки</h5>
+          <div class="w-100 d-flex justify-content-center">
+            <div class="form-block-label-hesk d-flex justify-content-between flex-wrap">
+              <div class="form-main-box" *ngFor="let item of [0, 1, 1, 1, 1, 1, 1, 1, 1, 1]">
+                <label class="custom-checkbox">
+                  <input
+                    class="checkbox"
+                    type="checkbox"
+                  >
+                  <span class="checkbox">Ликвидирован</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template ngSwitchCase="4">
+          <h5 class="text-center mb-4">Необходимость софинансирования проекта</h5>
+          <div class="w-100 d-flex flex-column align-items-center">
+            <div class="form-main-box" *ngFor="let item of [0, 1]">
+              <label class="custom-checkbox">
+                <input
+                  class="checkbox"
+                  type="checkbox"
+                >
+                <span class="checkbox">Ликвидирован</span>
+              </label>
+            </div>
+          </div>
+        </ng-template>
+      </div>
+      <div class="d-flex justify-content-center w-100 mt-4">
+        <button class="button" (click)="changeStage()">{{currentStage === 4 ? 'Закончить' : 'Дальше'}}</button>
+      </div>
     </div>
   </div>
 </div>

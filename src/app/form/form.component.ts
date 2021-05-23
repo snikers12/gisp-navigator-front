@@ -21,6 +21,7 @@ export class FormComponent implements OnInit {
       this.router.navigate(['/grants']).then();
     } else {
       this.currentStage++;
+      window.scrollTo(0, 120);
     }
   }
 }

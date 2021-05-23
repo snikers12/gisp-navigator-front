@@ -18,6 +18,26 @@
     color: white;
     border-radius: 50%;
   }
+
+  &-info {
+    padding: 25px 35px;
+    margin-top: 32px;
+    background: #ffff;
+
+    &-element {
+      margin-top: 24px;
+
+      &-field {
+        display: block;
+        width: 45%;
+      }
+
+      &-text {
+        display: block;
+        width: 45%;
+      }
+    }
+  }
 }
 
 .reviews {

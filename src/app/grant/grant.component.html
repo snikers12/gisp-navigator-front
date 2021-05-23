@@ -9,6 +9,68 @@
       <button type="button" class="button button-question" placement="right" ngbTooltip="Рекомендовано вам"></button>
     </div>
   </div>
+  <div [innerHTML]="'fewfew' | trustHtml" class="mt-4"></div>
+  <div class="w-100 grant-info">
+    <h3>Общая информация</h3>
+    <div class="d-flex grant-info-element justify-content-between">
+      <span class="grant-info-element-field">Полное наименование регулирующего предоставление меры поддержки с указанием реквизитов</span>
+      <span class="grant-info-element-text">Стандарт СФ-И-116. Условия и порядок отбора проектов для финансирования по программе
+        «Цифровизация промышленности»</span>
+    </div>
+    <div class="d-flex grant-info-element justify-content-between">
+      <span class="grant-info-element-field">Тип меры поддержки</span>
+      <span class="grant-info-element-text">Стандарт СФ-И-116. Условия и порядок отбора проектов для финансирования по программе
+        «Цифровизация промышленности»</span>
+    </div>
+    <div class="d-flex grant-info-element justify-content-between">
+      <span class="grant-info-element-field">Формат предоставления поддержки</span>
+      <span class="grant-info-element-text">Стандарт СФ-И-116. Условия и порядок отбора проектов для финансирования по программе
+        «Цифровизация промышленности»</span>
+    </div>
+    <div class="d-flex grant-info-element justify-content-between">
+      <span class="grant-info-element-field">Срок возврата предоставленной поддержки</span>
+      <span class="grant-info-element-text">Стандарт СФ-И-116. Условия и порядок отбора проектов для финансирования по программе
+        «Цифровизация промышленности»</span>
+    </div>
+    <div class="d-flex grant-info-element justify-content-between">
+      <span class="grant-info-element-field">Процентная ставка предоставления поддержки</span>
+      <span class="grant-info-element-text">Стандарт СФ-И-116. Условия и порядок отбора проектов для финансирования по программе
+        «Цифровизация промышленности»</span>
+    </div>
+    <div class="d-flex grant-info-element justify-content-between">
+      <span class="grant-info-element-field">Регулярность оказания меры поддержки</span>
+      <span class="grant-info-element-text">Стандарт СФ-И-116. Условия и порядок отбора проектов для финансирования по программе
+        «Цифровизация промышленности»</span>
+    </div>
+    <h3>Требования к проекту</h3>
+    <div class="d-flex grant-info-element justify-content-between">
+      <span class="grant-info-element-field">Необходимость софинансирования проекта</span>
+      <span class="grant-info-element-text">Стандарт СФ-И-116. Условия и порядок отбора проектов для финансирования по программе
+        «Цифровизация промышленности»</span>
+    </div>
+    <div class="d-flex grant-info-element justify-content-between">
+      <span class="grant-info-element-field">Доля необходимого софинансирования</span>
+      <span class="grant-info-element-text">Стандарт СФ-И-116. Условия и порядок отбора проектов для финансирования по программе
+        «Цифровизация промышленности»</span>
+    </div>
+    <div class="d-flex grant-info-element justify-content-between">
+      <span class="grant-info-element-field">Допустимый бюджет проекта</span>
+      <span class="grant-info-element-text">Стандарт СФ-И-116. Условия и порядок отбора проектов для финансирования по программе
+        «Цифровизация промышленности»</span>
+    </div>
+    <h3>Требования к заявителю</h3>
+    <div class="d-flex grant-info-element justify-content-between">
+      <span class="grant-info-element-field">Полное наименование регулирующего предоставление меры поддержки с указанием реквизитов</span>
+      <span class="grant-info-element-text">Стандарт СФ-И-116. Условия и порядок отбора проектов для финансирования по программе
+        «Цифровизация промышленности»</span>
+    </div>
+    <div class="d-flex grant-info-element justify-content-between">
+      <span class="grant-info-element-field">Полное наименование регулирующего предоставление меры поддержки с указанием реквизитов</span>
+      <span class="grant-info-element-text">Стандарт СФ-И-116. Условия и порядок отбора проектов для финансирования по программе
+        «Цифровизация промышленности»</span>
+    </div>
+    Необходимые документы для предоставления меры поддержки
+  </div>
   <h4 class="grant-text">История успеха</h4>
   <div class="reviews">
     <div class="reviews-items">
@@ -21,7 +83,5 @@
     </div>
   </div>
   <h4 class="grant-text">Вас может заинтересовать</h4>
-  <div class="d-flex flex-wrap justify-content-between">
-    <app-card *ngFor="let item of [1, 2, 3]" class="main-item"></app-card>
-  </div>
+  <app-card *ngFor="let item of [1, 2, 3]" class="main-item"></app-card>
 </div>

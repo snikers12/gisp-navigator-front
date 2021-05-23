@@ -22,6 +22,15 @@
 
   &-main {
     margin-top: 32px;
+
+    &-box {
+      display: flex;
+      padding: 24px;
+      border: 1px solid rgb(214, 217, 224);
+      width: 416px;
+      align-items: center;
+      margin-bottom: 24px;
+    }
   }
 
   &-progress {
@@ -48,11 +57,107 @@
 
   &-block {
     width: 100%;
-    height: 400px;
+    min-height: 400px;
     background: white;
-    border-radius: 4px;
+    border-radius: 8px;
     border: 1px solid #ededed;
     padding: 25px;
     margin-top: 32px;
+
+    &-label {
+      display: block;
+      margin-right: 16px;
+      width: 40px;
+
+      &-hesk {
+        width: 860px;
+      }
+    }
   }
+}
+
+.input {
+  width: 200px;
+  height: 50px;
+  border: 1px solid #ededed;
+  outline: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+
+  &:focus {
+    border: 1px solid #ededed;
+  }
+
+  &:active {
+    border: 1px solid #ededed;
+  }
+}
+
+.button {
+  width: 120px;
+  background: rebeccapurple;
+  color: white;
+  border-radius: 8px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  border: none;
+  outline: none;
+
+  &-question {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 24px;
+    background: #fff;
+    border: 1px solid black;
+    background: asset_url('img/question.svg') no-repeat center;
+    background-size: 15px;
+  }
+}
+
+.custom-checkbox > input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  margin: 0 !important;
+  cursor: pointer;
+}
+
+.custom-checkbox > span {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.custom-checkbox > span::before {
+  display: inline-block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  border: 2px solid rebeccapurple;
+  border-radius: 0.25em;
+  content: '';
+}
+
+.custom-checkbox > input:not(:disabled):active + span::before {
+  background-color: #ededed;
+}
+
+.custom-checkbox > input:checked + span::before {
+  background-color: rebeccapurple;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+  border-color: #fff;
 }

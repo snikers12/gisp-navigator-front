@@ -1,5 +1,96 @@
 <div class="container grants">
-  <div class="d-flex flex-wrap justify-content-between">
-    <app-card *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 9]" class="main-item"></app-card>
+  <div class="main-block">
+    <div class="d-flex flex-column w-100">
+      <span class="main-block-label">Поиск</span>
+      <input type="text" placeholder="Введите название" class="input main-input">
+    </div>
+    <div class="d-flex justify-content-between mt-4">
+      <div class="d-flex flex-column main-block-filter">
+        <span class="main-block-label">Территориальный уровень меры поддержки</span>
+        <ng-select
+          [items]="['ПАрпкпк', 'ergreg', 'frefreferf']"
+          [virtualScroll]="false"
+          [searchable]="false"
+          [clearable]="false"
+          class="select select-custom w-100"
+          bindValue="id"
+          bindLabel="name"
+          clearAllText="Очистить"
+          notFoundText="Ничего не найдено"
+          placeholder="Не выбрано"
+        >
+        </ng-select>
+      </div>
+      <div class="d-flex flex-column main-block-filter">
+        <span class="main-block-label">Отрасли</span>
+        <ng-select
+          [items]="['ПАрпкпк', 'ergreg', 'frefreferf']"
+          [virtualScroll]="false"
+          [searchable]="false"
+          [clearable]="false"
+          class="select select-custom w-100"
+          bindValue="id"
+          bindLabel="name"
+          clearAllText="Очистить"
+          notFoundText="Ничего не найдено"
+          placeholder="Не выбрано"
+        >
+        </ng-select>
+      </div>
+    </div>
+    <div class="d-flex justify-content-between mt-4">
+      <div class="d-flex flex-column main-block-filter">
+        <span class="main-block-label">Регулярность оказания меры поддержки</span>
+        <ng-select
+          [items]="['ПАрпкпк', 'ergreg', 'frefreferf']"
+          [virtualScroll]="false"
+          [searchable]="false"
+          [clearable]="false"
+          class="select select-custom w-100"
+          bindValue="id"
+          bindLabel="name"
+          clearAllText="Очистить"
+          notFoundText="Ничего не найдено"
+          placeholder="Не выбрано"
+        >
+        </ng-select>
+      </div>
+      <div class="d-flex flex-column main-block-filter">
+        <span class="main-block-label">Размер предприятия</span>
+        <ng-select
+          [items]="['ПАрпкпк', 'ergreg', 'frefreferf']"
+          [virtualScroll]="false"
+          [searchable]="false"
+          [clearable]="false"
+          class="select select-custom w-100"
+          bindValue="id"
+          bindLabel="name"
+          clearAllText="Очистить"
+          notFoundText="Ничего не найдено"
+          placeholder="Не выбрано"
+        >
+        </ng-select>
+      </div>
+    </div>
+    <div class="d-flex justify-content-between mt-4 position-relative">
+      <div class="d-flex flex-column main-block-filter">
+        <span class="main-block-label">Формат предоставления поддержки</span>
+        <ng-select
+          [items]="['ПАрпкпк', 'ergreg', 'frefreferf']"
+          [virtualScroll]="false"
+          [searchable]="false"
+          [clearable]="false"
+          class="select select-custom w-100"
+          bindValue="id"
+          bindLabel="name"
+          clearAllText="Очистить"
+          notFoundText="Ничего не найдено"
+          placeholder="Не выбрано"
+        >
+        </ng-select>
+      </div>
+      <button class="button main-block-filter-btn">Применить</button>
+    </div>
   </div>
+  <app-card *ngFor="let item of [1, 2, 3]" class="main-item"></app-card>
 </div>
